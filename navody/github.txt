@@ -1,0 +1,76 @@
+Prejdi do koreňového priečinka projektu
+
+Kde máš backend/, frontend/ a .gitignore:
+
+cd C:/Users/admin/Desktop/hair_eshop
+
+
+cd = change directory → mení aktuálny priečinok, aby Git operoval na správnom projekte.
+
+2️⃣ Inicializuj Git
+git init
+
+
+git init vytvorí nový Git repozitár vo foldri, pridá .git priečinok, ktorý sleduje všetky zmeny.
+
+Ak už tam bol Git, toto môžeš preskočiť.
+
+3️⃣ Skontroluj stav Git
+git status
+
+
+Ukáže ti, ktoré súbory sú staged (pripravené na commit), ktoré sú untracked (Git ich ešte nesleduje).
+
+Po inicializácii by mal ukázať všetky súbory v backend/ a frontend/ ako untracked.
+
+4️⃣ Pridaj všetko do Git
+git add .
+
+
+git add = pridáva súbory do tzv. staging area – Git ich pripraví na commit.
+
+. znamená “všetko v aktuálnom priečinku a podpriečinkoch”.
+
+Teraz sú backend aj frontend súbory pripravené na commit.
+
+5️⃣ Commitni zmeny
+git commit -m "Initial commit - add backend and frontend sources"
+
+
+git commit = vytvorí snapshot aktuálneho stavu súborov.
+
+-m "text" = pridáva správu commit-u, ktorá popisuje zmeny.
+
+Každý commit by mal mať jasnú, stručnú správu.
+
+6️⃣ Pridaj vzdialený repozitár (GitHub)
+git remote add origin https://github.com/martinjankech/hair_eshop.git
+
+
+git remote add origin <url> → pripojí tvoj lokálny Git k repozitáru na GitHube.
+
+origin je štandardný názov pre hlavný vzdialený repozitár.
+
+7️⃣ Nastav hlavnú vetvu na main
+git branch -M main
+
+
+git branch -M main → premení aktuálnu vetvu na main (nový štandard namiesto master).
+
+-M znamená “move/rename a force”, takže prepíše existujúcu vetvu, ak je.
+
+8️⃣ Nahraj všetko na GitHub
+git push -u origin main --force
+
+
+git push = odošle lokálne commity do vzdialeného repozitára (GitHub).
+
+-u = nastaví upstream, aby si mohol nabudúce písať len git push bez ďalších parametrov.
+
+--force = prepíše existujúci obsah repozitára na GitHube (v prípade, že tam už niečo je).
+
+✅ Po tomto kroku
+
+GitHub repozitár bude obsahovať backend aj frontend so všetkým zdrojovým kódom.
+
+.gitignore zabezpečí, že node_modules, vendor a buildy nebudú nahraté.
