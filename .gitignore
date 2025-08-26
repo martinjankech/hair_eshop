@@ -1,0 +1,12 @@
+# Node / React
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+
+# Laravel / PHP
+backend/vendor/
+backend/node_modules/
+
+# General
+.DS_Store
+.env
